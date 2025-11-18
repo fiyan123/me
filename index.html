@@ -50,25 +50,76 @@
 
 		<nav id="navmenu" class="navmenu">
 			<ul>
-				<li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-				<li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-				<li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-				<li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-				<li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+				<li>
+					<a href="#" data-bs-toggle="modal" data-bs-target="#modalCV">
+						<i class="bi bi-file-earmark-pdf navicon"></i> Lihat CV
+					</a>
+				</li>
+
+				<li>
+					<a href="#hero" class="active">
+						<i class="bi bi-house navicon"></i> Beranda
+					</a>
+				</li>
+
+				<li>
+					<a href="#about">
+						<i class="bi bi-person navicon"></i> Tentang
+					</a>
+				</li>
+
+				<li>
+					<a href="#resume">
+						<i class="bi bi-file-text navicon"></i> Resume
+					</a>
+				</li>
+
+				<li>
+					<a href="#portfolio">
+						<i class="bi bi-images navicon"></i> Portofolio
+					</a>
+				</li>
+
+				<li>
+					<a href="#contact">
+						<i class="bi bi-envelope navicon"></i> Kontak
+					</a>
+				</li>
 			</ul>
 		</nav>
-
 	</header>
 
 	<main class="main">
+
 		<!-- hero -->
 		<section id="hero" class="hero section dark-background">
 			<img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
 			<div class="container" data-aos="fade-up" data-aos-delay="100">
 				<h2>Muhammad Sofyan</h2>
-				<p>I'm <span class="typed" data-typed-items="Backend Developer, Website Developer, IT Support">
-					Backend Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
-				<span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+				<p>I'm <span class="typed" data-typed-items="Backend Developer, Website Developer, IT Support"></span></p>
+			</div>
+
+			<!-- modal cv -->
+			<div class="modal fade" id="modalCV" tabindex="-1" aria-labelledby="modalCVLabel" aria-hidden="true">
+				<div class="modal-dialog modal-xl"> 
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalCVLabel">Muhammad Sofyan - Curriculum Vitae</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						
+						<div class="modal-body" style="height: 80vh;"> <iframe src="assets/file/Muhammad-Sofyan-CV.pdf" width="100%" height="100%" style="border: none;">
+								Browser Anda tidak mendukung preview PDF. Silakan download melalui tombol di bawah.
+							</iframe>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+							<a href="assets/file/Muhammad-Sofyan-CV.pdf" download class="btn btn-primary">
+								<i class="bi bi-download"></i> Download PDF
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -105,9 +156,6 @@
 								<ul>
 									<li><i class="bi bi-chevron-right"></i> <strong>Tanggal Lahir:</strong> 
 										<span>19 Juni 2005</span>
-									</li>
-									<li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> 
-										<span><a href="https://fiyan123.github.io/me" class="cta-underline">Kunjungi Situs</a></span>
 									</li>
 									<li><i class="bi bi-chevron-right"></i> <strong>Telepon:</strong> 
 										<span>+62 8129 2690 186</span>
@@ -359,10 +407,10 @@
 			</div>
 		</section>
 
-		<!-- Portfolio Section -->
+		<!-- Portofolio Section -->
 		<section id="portfolio" class="portfolio section light-background">
 			<div class="container section-title" data-aos="fade-up">
-				<h2>Portfolio</h2>
+				<h2>Portofolio</h2>
 				<p>Berikut adalah beberapa proyek yang telah saya kerjakan sebagai Web Developer dan Backend Developer.
 					Setiap proyek mencerminkan kemampuan teknis saya serta dedikasi saya dalam menciptakan solusi
 					digital yang efektif dan inovatif.
@@ -454,7 +502,7 @@
 							<div class="portfolio-content h-100">
 								<img src="assets/img/web/koprs/landing_page_koprs.png" class="img-fluid" alt="">
 								<div class="portfolio-info">
-									<h4>Website Koperasi</h4>
+									<h4>SIM Koperasi</h4>
 									<p class="text-gray-400 mb-4">
 										Fokus utama saya adalah membuat sistem yang user-friendly, responsif, dan aman, agar
 										koperasi bisa beroperasi lebih efisien di era digital.
@@ -522,7 +570,7 @@
 
 			<div class="container" data-aos="fade-up" data-aos-delay="100">
 				<div class="row gy-4">
-					<div class="col-lg-12">
+					<div class="col-lg-5">
 						<div class="info-wrap">
 							<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
 								<i class="bi bi-geo-alt flex-shrink-0"></i>
@@ -551,44 +599,39 @@
 						</div>
 					</div>
 
-					<!-- <div class="col-lg-7">
-						<form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-							data-aos-delay="200">
+					<div class="col-lg-7">
+						<form action="https://formspree.io/f/xqanzybl" method="POST" id="contactForm" data-aos="fade-up" data-aos-delay="200">
 							<div class="row gy-4">
-
 								<div class="col-md-6">
-									<label for="name-field" class="pb-2">Your Name</label>
+									<label for="name-field" class="pb-2">Nama Anda</label>
 									<input type="text" name="name" id="name-field" class="form-control" required="">
 								</div>
 
 								<div class="col-md-6">
-									<label for="email-field" class="pb-2">Your Email</label>
+									<label for="email-field" class="pb-2">Email Anda</label>
 									<input type="email" class="form-control" name="email" id="email-field" required="">
 								</div>
 
 								<div class="col-md-12">
-									<label for="subject-field" class="pb-2">Subject</label>
-									<input type="text" class="form-control" name="subject" id="subject-field"
-										required="">
+									<label for="subject-field" class="pb-2">Subjek</label>
+									<input type="text" class="form-control" name="_subject" id="subject-field" required="">
 								</div>
 
 								<div class="col-md-12">
-									<label for="message-field" class="pb-2">Message</label>
-									<textarea class="form-control" name="message" rows="10" id="message-field"
-										required=""></textarea>
+									<label for="message-field" class="pb-2">Pesan</label>
+									<textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
 								</div>
 
 								<div class="col-md-12 text-center">
-									<div class="loading">Loading</div>
+									<div class="loading text-center mb-3"></div>
 									<div class="error-message"></div>
-									<div class="sent-message">Your message has been sent. Thank you!</div>
+									<div class="sent-message">Pesan Anda telah terkirim. Terima kasih!</div>
 
-									<button type="submit">Send Message</button>
+									<button type="submit" class="btn btn-primary">Kirim Pesan</button>
 								</div>
-
 							</div>
-						</form>
-					</div> -->
+						</form> 
+					</div>
 				</div>
 			</div>
 		</section>

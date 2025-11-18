@@ -218,4 +218,60 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+
+  document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Mencegah reload halaman/redirect standar
+
+    var form = this;
+    var loading = form.querySelector('.loading');
+    var errorMessage = form.querySelector('.error-message');
+    var sentMessage = form.querySelector('.sent-message');
+    var button = form.querySelector('button[type="submit"]');
+
+    // 1. Tampilkan Loading, sembunyikan pesan lain, disable tombol
+    loading.style.display = 'block';
+    errorMessage.style.display = 'none';
+    sentMessage.style.display = 'none';
+    button.disabled = true;
+    button.innerHTML = 'Mengirim...'; // Opsional: ubah teks tombol
+
+    // 2. Kirim data menggunakan Fetch API (AJAX)
+    var data = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        // 3. Jika Berhasil
+        loading.style.display = 'none';
+        sentMessage.style.display = 'block';
+        form.reset(); // Kosongkan form
+      } else {
+        // 4. Jika Gagal (Server merespon tapi error)
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            errorMessage.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+          } else {
+            errorMessage.innerHTML = "Maaf, ada masalah saat mengirim pesan.";
+          }
+          loading.style.display = 'none';
+          errorMessage.style.display = 'block';
+        });
+      }
+    }).catch(error => {
+      // 5. Jika Error Jaringan
+      loading.style.display = 'none';
+      errorMessage.innerHTML = "Terjadi kesalahan koneksi. Silakan coba lagi.";
+      errorMessage.style.display = 'block';
+    }).finally(() => {
+      // Kembalikan tombol seperti semula
+      button.disabled = false;
+      button.innerHTML = 'Kirim Pesan';
+    });
+  });
+
 })();

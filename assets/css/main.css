@@ -81,10 +81,15 @@ h1,
 h2,
 h3,
 h4,
-h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+}
+
+h5 {
+  color: var(--surface-color);
+  font-family: var(--heading-font);
+  font-weight: 600;
 }
 
 /* PHP Email Form Messages
@@ -225,7 +230,7 @@ h6 {
 
 .header .header-toggle {
   color: var(--contrast-color);
-  background-color: var(--accent-color);
+  background-color: var(--nav-mobile-background-color);
   font-size: 22px;
   display: flex;
   align-items: center;
@@ -428,7 +433,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: var(--heading-color);
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -1341,4 +1346,74 @@ section,
 
 .cta-underline:hover::after {
     width: 100%;
+}
+
+/* Style untuk Tombol Kirim */
+.loading {
+  display: none;
+}
+
+#contactForm button[type="submit"] {
+  background: #0563bb; 
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#contactForm button[type="submit"]:hover {
+  background: #0678e3; /* Warna saat hover */
+}
+
+/* Sembunyikan pesan status secara default */
+#contactForm .loading,
+#contactForm .error-message,
+#contactForm .sent-message {
+  display: none;
+  font-weight: 600;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+/* Style saat Loading */
+#contactForm .loading {
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Style Pesan Error */
+#contactForm .error-message {
+  color: #fff;
+  background: #ed3c0d;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* Style Pesan Sukses */
+#contactForm .sent-message {
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* Style untuk Loading Spinner */
+.loading {
+  display: none; /* Tetap hidden defaultnya */
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 15px auto; /* Posisi tengah (center) */
+  border: 4px solid #f3f3f3; /* Warna abu-abu terang (background ring) */
+  border-top: 4px solid #0563bb; /* Warna biru (warna utama tema Anda) */
+  border-radius: 50%; /* Membuatnya jadi bulat */
+  animation: putar 1s linear infinite; /* Animasi berputar selamanya */
+}
+
+/* Definisi Animasi Putar */
+@keyframes putar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
