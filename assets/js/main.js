@@ -274,4 +274,24 @@
     });
   });
 
+  // tampilan umur otomatis
+  const birthDate = new Date(2005, 5, 19); 
+  // Catatan: bulan dimulai dari 0 → 5 = Juni
+
+  const today = new Date();
+
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthNow = today.getMonth();
+  const monthBirth = birthDate.getMonth();
+
+  // Cek bulan & tanggal apakah ulang tahun sudah lewat
+  if (
+      monthNow < monthBirth || 
+      (monthNow === monthBirth && today.getDate() < birthDate.getDate())
+  ) {
+      age--;
+  }
+
+  document.getElementById("umur").textContent = age + " Tahun";
+  
 })();
