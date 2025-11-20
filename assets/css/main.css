@@ -86,8 +86,8 @@ h6 {
   font-family: var(--heading-font);
 }
 
-h5 {
-  color: var(--surface-color);
+#modalCVLabel {
+  color: var(--heading-color);
   font-family: var(--heading-font);
   font-weight: 600;
 }
@@ -549,12 +549,13 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  min-height: 40vh; /* Sedikit ditinggikan agar lega */
   position: relative;
-  padding: 80px 0;
+  padding: 60px 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #1e1e1e; /* Pastikan background section gelap */
 }
 
 .hero img {
@@ -1417,3 +1418,86 @@ section,
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/*--------------------------------------------------------------
+# Linux Terminal Style (Ubuntu Vibes)
+--------------------------------------------------------------*/
+.terminal-window {
+  background-color: #300a24; /* Warna Ungu Gelap khas Ubuntu Terminal */
+  /* Atau gunakan #1e1e1e jika ingin hitam polos */
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6); /* Shadow lebih dramatis */
+  width: 100%;
+  max-width: 900px; /* PENTING: Agar tidak terlalu lebar di layar besar */
+  margin: 0 auto;   /* Posisi tengah horizontal */
+  overflow: hidden;
+  font-family: 'Ubuntu Mono', 'Courier New', monospace; /* Font Linux */
+  font-size: 15px;
+  text-align: left;
+  border: 1px solid #451e3e; /* Border tipis */
+}
+
+.terminal-header {
+  background-color: #3e3e3e; /* Warna Header Abu Gelap */
+  background: linear-gradient(to bottom, #4a4a4a, #3e3e3e);
+  padding: 8px 15px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.terminal-title {
+  color: #ddd;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-button {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Warna Tombol Khas Window Linux */
+.close { background-color: #e95420; } /* Orange Ubuntu */
+.minimize { background-color: #777; }
+.maximize { background-color: #777; }
+
+.terminal-body {
+  background-color: #1e1e1e; /* Menyamakan dengan window background */
+  padding: 20px;
+  min-height: 350px; /* Tinggi minimal agar tidak gepeng */
+}
+
+/* Warna Text Update */
+.prompt { color: #8ae234; margin-right: 8px; font-weight: bold; } /* Hijau Terang */
+.text-green { color: #8ae234; }
+.text-yellow { color: #fce94f; }
+.text-package { color: #dacbcb; margin-left: 20px; }
+
+/* Cursor Effect */
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background-color: #fff;
+  animation: blink 1s infinite;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.hidden { display: none; }

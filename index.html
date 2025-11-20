@@ -35,7 +35,7 @@
 		<i class="header-toggle d-xl-none bi bi-list"></i>
 
 		<div class="profile-img">
-			<img src="assets/file/sofyan.jpg" alt="" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+			<img src="assets/file/pp.jpg" alt="" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
 		</div>
 
 		<a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -91,37 +91,69 @@
 
 	<main class="main">
 
-		<!-- hero -->
 		<section id="hero" class="hero section dark-background">
-			<img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
-			<div class="container" data-aos="fade-up" data-aos-delay="100">
-				<h2>Muhammad Sofyan</h2>
-				<p>I'm <span class="typed" data-typed-items="Backend Developer, Website Developer, IT Support"></span></p>
-			</div>
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-title">sofyan@dev: ~ (zsh)</div>
+                <div class="terminal-controls">
+                    <div class="terminal-button minimize"></div>
+                    <div class="terminal-button maximize"></div>
+                    <div class="terminal-button close"></div>
+                </div>
+            </div>
+            
+            <div class="terminal-body" id="terminalContent">
+                <div class="terminal-line">
+                    <span class="prompt">sofyan@dev:~$</span>
+                    <span class="typing-text" data-text="npm install backend-skills"></span>
+                </div>
+                
+                <div class="terminal-output hidden" id="output1">
+					<span class="text-green">✔ Installing dependencies...</span><br>
+					<span class="text-package">📦 PHP Laravel Framework</span><br>
+					<span class="text-package">📦 RESTful API Concept</span><br>
+					<span class="text-package">📦 MySQL Database Optimization</span>
+				</div>
 
-			<!-- modal cv -->
-			<div class="modal fade" id="modalCV" tabindex="-1" aria-labelledby="modalCVLabel" aria-hidden="true">
-				<div class="modal-dialog modal-xl"> 
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="modalCVLabel">Muhammad Sofyan - Curriculum Vitae</h5>
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						
-						<div class="modal-body" style="height: 80vh;"> <iframe src="assets/file/Muhammad-Sofyan-CV.pdf" width="100%" height="100%" style="border: none;">
-								Browser Anda tidak mendukung preview PDF. Silakan download melalui tombol di bawah.
-							</iframe>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-							<a href="assets/file/Muhammad-Sofyan-CV.pdf" download class="btn btn-primary">
-								<i class="bi bi-download"></i> Download PDF
-							</a>
-						</div>
+                <div class="terminal-line hidden" id="line2">
+                    <span class="prompt">sofyan@dev:~$</span>
+                    <span class="typing-text" data-text="contact --email"></span>
+                </div>
+                
+                <div class="terminal-output hidden" id="output2">
+                    <span class="text-yellow">✉ sending email to...</span><br>
+                    <a href="mailto:emailanda@gmail.com" style="color: #4da6ff;">emailanda@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+		
+		<!-- modal cv -->
+		<div class="modal fade" id="modalCV" tabindex="-1" aria-labelledby="modalCVLabel" aria-hidden="true">
+			<div class="modal-dialog modal-xl"> 
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalCVLabel">Muhammad Sofyan - Curriculum Vitae</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					
+					<div class="modal-body" style="height: 80vh;"> <iframe src="assets/file/Muhammad-Sofyan-CV.pdf" width="100%" height="100%" style="border: none;">
+							Browser Anda tidak mendukung preview PDF. Silakan download melalui tombol di bawah.
+						</iframe>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+						<a href="assets/file/Muhammad-Sofyan-CV.pdf" download class="btn btn-primary">
+							<i class="bi bi-download"></i> Download PDF
+						</a>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 
 		<!-- about me -->
 		<section id="about" class="about section">

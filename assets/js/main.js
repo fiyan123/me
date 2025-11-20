@@ -293,5 +293,65 @@
   }
 
   document.getElementById("umur").textContent = age + " Tahun";
+
+  // terminal fake
+  document.addEventListener('DOMContentLoaded', function() {
+    // Fungsi untuk efek mengetik
+    async function typeText(element, text, delay = 50) {
+        for (let i = 0; i < text.length; i++) {
+            element.textContent += text.charAt(i);
+            await new Promise(resolve => setTimeout(resolve, delay));
+        }
+    }
+
+    // Logika Terminal
+    async function runTerminal() {
+        // 1. Ambil elemen
+        const text1 = document.querySelector('.typing-text[data-text="npm install backend-skills"]');
+        const output1 = document.getElementById('output1');
+        const line2 = document.getElementById('line2');
+        const text2 = document.querySelector('.typing-text[data-text="contact --email"]');
+        const output2 = document.getElementById('output2');
+
+        // Tambahkan kursor di baris 1
+        let cursor = document.createElement('span');
+        cursor.className = 'cursor';
+        text1.parentNode.appendChild(cursor);
+
+        // Mulai ngetik baris 1
+        await typeText(text1, "npm install backend-skills");
+        
+        // Jeda sebentar seolah-olah loading
+        await new Promise(r => setTimeout(r, 500));
+        
+        // Tampilkan hasil 1
+        cursor.remove(); // Hapus kursor baris 1
+        output1.classList.remove('hidden');
+        
+        // Jeda sebelum baris 2
+        await new Promise(r => setTimeout(r, 1000));
+
+        // Tampilkan baris 2 & Kursor
+        line2.classList.remove('hidden');
+        line2.appendChild(cursor); // Pindah kursor ke baris 2
+        
+        // Mulai ngetik baris 2
+        await typeText(text2, "contact --email");
+        
+        // Jeda & tampilkan hasil 2
+        await new Promise(r => setTimeout(r, 500));
+        cursor.remove();
+        output2.classList.remove('hidden');
+        
+        // Kursor diam di akhir (opsional)
+        let finalPrompt = document.createElement('div');
+        finalPrompt.className = 'terminal-line';
+        finalPrompt.innerHTML = '<span class="prompt">sofyan@dev:~$</span><span class="cursor"></span>';
+        document.getElementById('terminalContent').appendChild(finalPrompt);
+    }
+
+    // Jalankan fungsi (bisa pakai IntersectionObserver jika mau jalan saat di-scroll)
+    runTerminal();
+});
   
 })();
