@@ -1434,6 +1434,20 @@ section,
   border: 1px solid #333;
 }
 
+/* Di layar HP, ubah urutan agar terminal ada di atas atau bawah nama (sesuai selera) */
+@media (max-width: 991px) {
+    .hero h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+    .hero p, .hero h2 {
+        text-align: center;
+    }
+    .hero .d-flex {
+        justify-content: center;
+    }
+}
+
 /* Header (Bar Atas) */
 .terminal-header {
   background: #2d2d2d; /* Abu-abu header */

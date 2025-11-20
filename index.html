@@ -51,12 +51,6 @@
 		<nav id="navmenu" class="navmenu">
 			<ul>
 				<li>
-					<a href="#" data-bs-toggle="modal" data-bs-target="#modalCV">
-						<i class="bi bi-file-earmark-pdf navicon"></i> Lihat CV
-					</a>
-				</li>
-
-				<li>
 					<a href="#hero" class="active">
 						<i class="bi bi-house navicon"></i> Beranda
 					</a>
@@ -92,56 +86,77 @@
 	<main class="main">
 
 		<section id="hero" class="hero section dark-background">
-			<div class="container" data-aos="fade-up">
-				<div class="macos-terminal">
-					<div class="terminal-header">
-						<div class="terminal-buttons">
-							<span class="btn-dot red"></span>
-							<span class="btn-dot yellow"></span>
-							<span class="btn-dot green"></span>
-						</div>
-						<div class="terminal-title">sofyan@dev: ~/portofolio</div>
+			<div class="container">
+				<div class="row align-items-center gy-5">
+				
+				<div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+					<h1 data-aos="fade-up">Muhammad Sofyan</h1>
+					<h2 data-aos="fade-up" data-aos-delay="100" style="color: #ccc; margin-top: 10px;">
+						Backend Developer & Website Developer
+					</h2>
+					<p data-aos="fade-up" data-aos-delay="200" style="margin-top: 20px; max-width: 500px;">
+						Membangun sistem backend yang handal, aman, dan efisien untuk kebutuhan bisnis Anda.
+					</p>
+					
+					<div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+						<a href="#about" class="btn-get-started btn btn-primary me-3">Tentang Saya</a>
+						<a href="#" data-bs-toggle="modal" data-bs-target="#modalCV" class="btn btn-outline-light">Lihat CV</a>
 					</div>
+				</div>
 
-					<div class="terminal-body" id="terminalContent">
-						<div class="terminal-line">
-							<span class="prompt">sofyan@dev:~$</span>
-							<span class="typing-text" id="type1"></span>
-						</div>
-						
-						<div class="terminal-output hidden" id="output1">
-							<div class="output-row"><span class="text-green">✔</span> Checking environment...</div>
-							<div class="output-row"><span class="text-green">✔</span> Installing backend-dependencies...</div>
-							<div class="output-row indent"><span class="text-dim">📦 Laravel Framework</span></div>
-							<div class="output-row indent"><span class="text-dim">📦 CodeIgniter Framework</span></div>
-							<div class="output-row indent"><span class="text-dim">📦 PHP</span></div>
-							<div class="output-row indent"><span class="text-dim">📦 RESTful API Architecture</span></div>
-							<div class="output-row indent"><span class="text-dim">📦 MySQL & Database Optimization</span></div>
-							<div class="output-row indent"><span class="text-dim">📦 PostgreSQL & Database Optimization</span></div>
-							<div class="output-row"><span class="text-green">Done in 1.45s.</span></div>
-						</div>
-
-						<div class="terminal-line hidden" id="line2">
-							<span class="prompt">sofyan@dev:~$</span>
-							<span class="typing-text" id="type2"></span>
-						</div>
-
-						<div class="terminal-output hidden" id="output2">
-							<div class="output-row">
-								<span class="text-yellow">✉ Opening mail client...</span>
+				<div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="200">
+					<div class="macos-terminal">
+						<div class="terminal-header">
+							<div class="terminal-buttons">
+								<span class="btn-dot red"></span>
+								<span class="btn-dot yellow"></span>
+								<span class="btn-dot green"></span>
 							</div>
-							<div class="output-row">
-								Target: <a href="mailto:emailanda@gmail.com" class="link-highlight">moehamadsofyan@gmail.com</a>
-							</div>
+							<div class="terminal-title">sofyan@dev: ~/portfolio</div>
 						</div>
 
-						<div class="terminal-line hidden" id="lineEnd">
-							<span class="prompt">sofyan@dev:~$</span><span class="cursor-blink"></span>
+						<div class="terminal-body" id="terminalContent">
+							<div class="terminal-line">
+								<span class="prompt">sofyan@dev:~$</span>
+								<span class="typing-text" id="type1"></span>
+							</div>
+							
+							<div class="terminal-output hidden" id="output1">
+								<div class="output-row"><span class="text-green">✔</span> Checking environment...</div>
+								<div class="output-row"><span class="text-green">✔</span> Installing backend-dependencies...</div>
+								<div class="output-row indent"><span class="text-dim">📦 Laravel Framework</span></div>
+								<div class="output-row indent"><span class="text-dim">📦 CodeIgniter Framework</span></div>
+								<div class="output-row indent"><span class="text-dim">📦 RESTful API Architecture</span></div>
+								<div class="output-row indent"><span class="text-dim">📦 MySQL Optimization</span></div>
+								<div class="output-row indent"><span class="text-dim">📦 PostgreSQL Optimization</span></div>
+								<div class="output-row"><span class="text-green">Done in 1.45s.</span></div>
+							</div>
+
+							<div class="terminal-line hidden" id="line2">
+								<span class="prompt">sofyan@dev:~$</span>
+								<span class="typing-text" id="type2"></span>
+							</div>
+
+							<div class="terminal-output hidden" id="output2">
+								<div class="output-row">
+									<span class="text-yellow">★ System Status:</span> 
+									<span style="color: #fff;">ONLINE & READY TO WORK</span>
+								</div>
+								<div class="output-row">
+									<span class="text-dim">> Waiting for new project...</span>
+								</div>
+							</div>
+
+							<div class="terminal-line hidden" id="lineEnd">
+								<span class="prompt">sofyan@dev:~$</span><span class="cursor-blink"></span>
+							</div>
 						</div>
 					</div>
 				</div>
+
+				</div>
 			</div>
-		</section>
+			</section>
 		
 		<!-- modal cv -->
 		<div class="modal fade" id="modalCV" tabindex="-1" aria-labelledby="modalCVLabel" aria-hidden="true">
@@ -337,7 +352,7 @@
 									efisiensi,
 									dengan pengalaman lebih dari 3 tahun dalam merancang, membangun, serta mengelola
 									sistem berbasis web.
-									Terampil dalam menggunakan teknologi seperti PHP, MySQL, PostgreSQL, dan framework modern untuk
+									Terampil dalam menggunakan teknologi seperti PHP, MySQL, PostgreSQL, dan framework untuk
 									mengembangkan
 									aplikasi yang aman, cepat, dan mudah di-maintain.
 									Memiliki komitmen tinggi terhadap kualitas kode, kolaborasi tim, serta pemecahan
@@ -372,8 +387,7 @@
 							<h4>SMK Assalaam Bandung - Rekayasa Perangkat Lunak</h4>
 							<h5>2020 - 2023</h5>
 							<p><em>Jl. Situ Tarate Jl. Cibaduyut, Cangkuang Kulon, Kabupaten Bandung.</em></p>
-							<p>Mempelajari dasar-dasar pemrograman, pengembangan aplikasi web, <strong>mobile
-									development</strong>,
+							<p>Mempelajari dasar-dasar pemrograman, pengembangan aplikasi web, <strong>mobile development</strong>,
 								dan <strong>jaringan komputer</strong>. Aktif dalam proyek praktikum dan kompetisi
 								teknologi, termasuk
 								pembuatan aplikasi sederhana dan implementasi sistem berbasis database. Pengalaman ini
@@ -718,74 +732,62 @@
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
 			
-			// Konfigurasi Teks yang akan diketik
+			// --- KONFIGURASI TEKS DI SINI ---
 			const commands = [
 				{ id: 'type1', text: 'npm install backend-skills' },
-				{ id: 'type2', text: 'contact --email' }
+				{ id: 'type2', text: 'echo "Check Status"' } // Ubah command kedua di sini
 			];
 			
-			// Status agar animasi hanya jalan 1 kali
 			let hasStarted = false;
 
-			// Fungsi mengetik efek ketikan
-			async function typeEffect(elementId, text, speed = 60) {
+			async function typeEffect(elementId, text, speed = 50) {
 				const element = document.getElementById(elementId);
-				// Tambah cursor sementara saat mengetik
 				element.style.borderRight = "8px solid #ccc"; 
 				
 				for (let i = 0; i < text.length; i++) {
 					element.textContent += text.charAt(i);
 					await new Promise(r => setTimeout(r, speed));
 				}
-				
-				// Hilangkan cursor setelah selesai ngetik
 				element.style.borderRight = "none";
 			}
 
-			// Logika Utama Terminal
 			async function startTerminal() {
-				if (hasStarted) return; // Cegah jalan 2 kali
+				if (hasStarted) return; 
 				hasStarted = true;
 
-				// 1. Ketik Command Pertama
+				// 1. Command Pertama
 				await typeEffect('type1', commands[0].text);
-				await new Promise(r => setTimeout(r, 500)); // Loading sebentar
+				await new Promise(r => setTimeout(r, 300));
 				
-				// Tampilkan Output 1
+				// Output 1
 				document.getElementById('output1').classList.remove('hidden');
 				
 				// 2. Jeda sebelum baris kedua
-				await new Promise(r => setTimeout(r, 1200));
+				await new Promise(r => setTimeout(r, 800));
 				document.getElementById('line2').classList.remove('hidden');
 				
-				// 3. Ketik Command Kedua
+				// 3. Command Kedua (Pesan Custom)
 				await typeEffect('type2', commands[1].text);
-				await new Promise(r => setTimeout(r, 500));
+				await new Promise(r => setTimeout(r, 300));
 				
-				// Tampilkan Output 2 & Baris Akhir
+				// Output 2 & Selesai
 				document.getElementById('output2').classList.remove('hidden');
 				document.getElementById('lineEnd').classList.remove('hidden');
 			}
 
-			// --- OPTIMASI KINERJA (Intersection Observer) ---
-			// Script hanya akan jalan jika terminal terlihat di layar user
+			// Intersection Observer (Agar jalan saat discroll)
 			let observer = new IntersectionObserver((entries) => {
 				entries.forEach(entry => {
 					if (entry.isIntersecting) {
 						startTerminal();
-						observer.unobserve(entry.target); // Stop memantau setelah jalan
+						observer.unobserve(entry.target);
 					}
 				});
-			}, { threshold: 0.3 }); // Jalan ketika 30% terminal terlihat
+			}, { threshold: 0.3 });
 
-			// Mulai memantau elemen terminal
 			const terminal = document.querySelector('.macos-terminal');
-			if (terminal) {
-				observer.observe(terminal);
-			} else {
-				// Fallback jika class tidak ditemukan (langsung jalan)
-				startTerminal();
-			}
+			if (terminal) observer.observe(terminal);
+			else startTerminal();
 		});
 	</script>
 </body>
